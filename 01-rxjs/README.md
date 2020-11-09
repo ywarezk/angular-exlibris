@@ -20,6 +20,19 @@ Our goal in this lesson is to improve your asynchronous coding skills.
 - Operators
 - Error Handling
 
+## Promise VS Observable
+
+Promise can resolve once  
+Observable can resolve many times  
+
+
+## EcmaScript Observable
+
+- stage 1 ready to move to stage2
+
+- stage2 typescript experimental 
+
+
 ## Student EX.
 
 ### Throttling 

@@ -1,0 +1,19 @@
+{
+  "name": "01-rxjs",
+  "version": "1.0.0",
+  "description": "Our goal in this lesson is to improve your asynchronous coding skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.6.3",
+    "ts-node": "^9.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}

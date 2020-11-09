@@ -32,3 +32,5 @@ The **README.md** file will also contain home assignments regarding the lessons 
 
 In this lesson we will improve our async programming skills.
 
+2. @angular/cli
+
