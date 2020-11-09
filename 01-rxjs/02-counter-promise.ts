@@ -6,5 +6,7 @@ const counterPromise$: Promise<number> = new Promise((resolve, reject) => {
 });
 
 counterPromise$.then((num: number) => {
+	console.log('print: 2')
 	console.log(num);
 })
+console.log('print: 1');

@@ -25,6 +25,11 @@ Our goal in this lesson is to improve your asynchronous coding skills.
 Promise can resolve once  
 Observable can resolve many times  
 
+## Promise VS Observable
+
+promise is always async  
+observable sometime async but if possible will run immediatly.  
+
 
 ## EcmaScript Observable
 

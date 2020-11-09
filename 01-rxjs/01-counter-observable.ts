@@ -7,5 +7,7 @@ const counter$: Observable<number> = new Observable((observer) => {
 });
 
 counter$.subscribe((num: number) => {
+	console.log('print 1:');
 	console.log(num);
-})
+});
+console.log('print 2');
