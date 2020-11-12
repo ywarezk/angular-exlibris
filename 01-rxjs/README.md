@@ -48,7 +48,7 @@ In this ex we will prioritize the user typing in search field over http request.
 - Using @angular/cli create a new angular project
 - in **AppComponent** you should place a text input for searching along with an unordered list **ul** displaying items from a server.
 - Our server is located at the following URL: 
-https://nztodo.herokuapp.com/api/task/?format=json&search=`<search-string>`
+https://nztodo.herokuapp.com/api/tasks/?format=json&search=`<search string>`
 - it will accept a search string and display a filtered list according to the search param.
 - when the user types search text our app should send a request to the server and display the list that the server returns.
 - We want to send one request when the user stopped typing and not many requests with each character.
