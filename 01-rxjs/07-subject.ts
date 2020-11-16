@@ -1,4 +1,5 @@
-import { Subject, BehaviorSubject, ReplaySubject } from 'rxjs';
+import { Subject, BehaviorSubject, ReplaySubject, interval } from 'rxjs';
+import { multicast } from 'rxjs/operators';
 
 const counter$: Subject<number> = new Subject();
 
@@ -29,3 +30,26 @@ counter2$.next(3);
 counter2$.subscribe((num: number) => {
 	
 })
+
+const intervalSubj = new Subject();
+
+const myObs$ = interval(1000).pipe(
+	multicast(intervalSubj)
+);
+
+
+intervalSubj.asObservable();
+
+/*
+
+@Injectable({
+	providedIn: 'root'
+})
+export class ShoulService {
+	private data = new Subject()
+	
+	public data$ = this.data.asObservable()
+}
+
+
+*/

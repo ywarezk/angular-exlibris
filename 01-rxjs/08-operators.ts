@@ -22,12 +22,15 @@ function map(cb: (arg: any) => any) {
 
  */
  
-import { interval, Observable, Subject } from 'rxjs';
+import { interval, Observable, Subject, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 const counter$: Observable<number>  = interval(1000);
 
 const hello$: Observable<string> = counter$.pipe(
+	tap((msg: number) => {
+		console.log(msg);
+	}),
 	map((num: number) => {
 		return `hello world ${num}`;
 	}),
@@ -35,4 +38,8 @@ const hello$: Observable<string> = counter$.pipe(
 		console.log(msg);
 	})
 )
+
+of(10).subscribe((num10) => {
+	console.log(num10);
+})
 
