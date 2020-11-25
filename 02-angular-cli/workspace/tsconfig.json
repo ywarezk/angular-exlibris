@@ -24,9 +24,11 @@
         "dist/exlibris/auth/exlibris-auth",
         "dist/exlibris/auth"
       ],
-      "@exlibris/forms": [
-        "dist/exlibris/forms/exlibris-forms",
-        "dist/exlibris/forms"
+      "@exlibris/auth@dev": [
+        "projects/exlibris/auth/src/public-api.ts"
+      ],
+      "@exlibris/forms@dev": [
+        "projects/exlibris/forms/src/public-api.ts"
       ],
       "@exlibris/test": [
         "dist/exlibris/test/exlibris-test",

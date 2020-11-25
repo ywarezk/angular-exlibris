@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-forms',
+  selector: 'exlibris-forms',
   template: `
     <p>
-      forms works!
+      forms works and hello Piglet222!
+    </p>
+    <p>
+      new version
     </p>
   `,
   styles: [

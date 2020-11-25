@@ -1,0 +1,39 @@
+<h1>
+@Input
+</h1>
+
+<app-input-example1 firstName="Pigletshvily" [pigletAge]="age" ></app-input-example1>
+
+<h1>
+@Output
+</h1>
+
+<app-output-example2 (buttonClicked)="helloWorld($event)"></app-output-example2>
+
+<h1>
+Template Reference Variable
+</h1>
+
+<app-trv-video-player-example3 #videoPlayer="myVideoPlayer"></app-trv-video-player-example3>
+
+<button (click)="videoPlayer.play()">
+  play
+</button>
+
+<p #saveTheP>
+  some text
+</p>
+
+<!--
+<input [(ngModel)]="stam" required minlength="3" email #ngModelInstance="ngModel" />
+{{ ngModelInstance.errors }}
+-->
+
+<h2>
+  @ViewChild
+</h2>
+
+<app-view-child-example4></app-view-child-example4>
+
+
+<app-ng-if-question></app-ng-if-question>

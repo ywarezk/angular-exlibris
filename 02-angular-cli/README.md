@@ -2,6 +2,22 @@
 
 Advanced concepts in angular cli
 
+```
+npx @angular/cli new workspace --create-application=false 
+```
+
+```
+npx ng g application foo
+```
+
+```
+npx ng serve foo
+```
+
+```
+npx ng g library @exlibris/forms
+```
+
 ## Lesson Plan
 
 - creating a workspace
