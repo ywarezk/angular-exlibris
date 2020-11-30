@@ -1,14 +1,14 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-input-example1',
+  selector: 'app-input-example',
   template: `
     <p>
       my name is {{firstName}} and my age is {{ age }}
     </p>
   `,
 })
-export class InputExample1Component implements OnInit, OnChanges {
+export class InputExampleComponent implements OnInit, OnChanges {
   @Input()
   firstName: string;
 

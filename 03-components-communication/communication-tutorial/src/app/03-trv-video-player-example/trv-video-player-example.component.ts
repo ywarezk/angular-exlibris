@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-trv-video-player-example3',
+  selector: 'app-trv-video-player-example',
   template: `
     <p>
       trv-video-player-example3 works!
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   exportAs: "myVideoPlayer"
 })
-export class TrvVideoPlayerExample3Component implements OnInit {
+export class TrvVideoPlayerExampleComponent implements OnInit {
 
   constructor() { }
 

@@ -2,19 +2,19 @@
 @Input
 </h1>
 
-<app-input-example1 firstName="Pigletshvily" [pigletAge]="age" ></app-input-example1>
+<app-input-example firstName="Pigletshvily" [pigletAge]="age" ></app-input-example>
 
 <h1>
 @Output
 </h1>
 
-<app-output-example2 (buttonClicked)="helloWorld($event)"></app-output-example2>
+<app-output-example (buttonClicked)="helloWorld($event)"></app-output-example>
 
 <h1>
 Template Reference Variable
 </h1>
 
-<app-trv-video-player-example3 #videoPlayer="myVideoPlayer"></app-trv-video-player-example3>
+<app-trv-video-player-example #videoPlayer="myVideoPlayer"></app-trv-video-player-example>
 
 <button (click)="videoPlayer.play()">
   play
@@ -33,7 +33,7 @@ Template Reference Variable
   @ViewChild
 </h2>
 
-<app-view-child-example4></app-view-child-example4>
+<app-view-child-example></app-view-child-example>
 
 
 <app-ng-if-question></app-ng-if-question>

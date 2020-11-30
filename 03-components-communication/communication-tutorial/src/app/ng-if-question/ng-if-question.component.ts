@@ -1,5 +1,5 @@
 import { AfterViewChecked, Component, OnInit, ViewChild } from '@angular/core';
-import { TrvVideoPlayerExample3Component } from '../trv-video-player-example3/trv-video-player-example3.component';
+import { TrvVideoPlayerExampleComponent } from '../03-trv-video-player-example/trv-video-player-example.component';
 
 @Component({
   selector: 'app-ng-if-question',
@@ -8,7 +8,7 @@ import { TrvVideoPlayerExample3Component } from '../trv-video-player-example3/tr
       ng-if-question works!
     </p>
     <div *ngIf="someCondition">
-      <app-trv-video-player-example3 #videoPlayer></app-trv-video-player-example3>
+      <app-trv-video-player-example #videoPlayer></app-trv-video-player-example>
     </div>
 
   `,
@@ -16,7 +16,7 @@ import { TrvVideoPlayerExample3Component } from '../trv-video-player-example3/tr
 export class NgIfQuestionComponent implements AfterViewChecked, OnInit {
 
   @ViewChild('videoPlayer', {static: false})
-  videoPlayer: TrvVideoPlayerExample3Component;
+  videoPlayer: TrvVideoPlayerExampleComponent;
 
   constructor() { }
 

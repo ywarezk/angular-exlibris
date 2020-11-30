@@ -1,13 +1,13 @@
 import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { TrvVideoPlayerExample3Component } from '../trv-video-player-example3/trv-video-player-example3.component';
+import { TrvVideoPlayerExampleComponent } from '../03-trv-video-player-example/trv-video-player-example.component';
 
 @Component({
-  selector: 'app-view-child-example4',
+  selector: 'app-view-child-example',
   template: `
     <p #pigletFullName>
       Pigletshvily Chaitovski {{age}}
     </p>
-    <app-trv-video-player-example3 #videoPlayer="myVideoPlayer"></app-trv-video-player-example3>
+    <app-trv-video-player-example #videoPlayer="myVideoPlayer"></app-trv-video-player-example>
     <h1 innerText="{{stam}}">
 
     </h1>
@@ -18,12 +18,12 @@ import { TrvVideoPlayerExample3Component } from '../trv-video-player-example3/tr
 
   `,
 })
-export class ViewChildExample4Component implements OnInit, AfterViewInit {
+export class ViewChildExampleComponent implements OnInit, AfterViewInit {
   @ViewChild('videoPlayer')
-  videoPlayer: TrvVideoPlayerExample3Component;
+  videoPlayer: TrvVideoPlayerExampleComponent;
 
-  @ViewChild(TrvVideoPlayerExample3Component)
-  videoPlayer1: TrvVideoPlayerExample3Component;
+  @ViewChild(TrvVideoPlayerExampleComponent)
+  videoPlayer1: TrvVideoPlayerExampleComponent;
 
   @ViewChild('pigletFullName')
   pigletName: ElementRef;

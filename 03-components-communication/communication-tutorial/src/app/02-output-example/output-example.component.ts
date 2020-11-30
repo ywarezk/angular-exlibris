@@ -5,7 +5,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-output-example2',
+  selector: 'app-output-example',
   template: `
     <p>
       output-example2 works!
@@ -18,7 +18,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     -->
   `,
 })
-export class OutputExample2Component implements OnInit {
+export class OutputExampleComponent implements OnInit {
   // $event
   @Output('buttonClicked')
   hello: EventEmitter<string> = new EventEmitter();
