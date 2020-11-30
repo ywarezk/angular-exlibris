@@ -7,9 +7,6 @@ import { MockService } from './mock.service';
   declarations: [],
   imports: [ CommonModule ],
   exports: [],
-  providers: [{
-    provide: DATA_STRATEGY,
-    useClass: MockService
-  }],
+  providers: [],
 })
 export class FeatureModule {}
