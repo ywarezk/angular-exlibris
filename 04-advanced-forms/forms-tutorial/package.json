@@ -19,9 +19,12 @@
     "@angular/platform-browser": "~11.0.1",
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
+    "@ngx-formly/schematics": "^5.10.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@ngx-formly/core": "^5.0.0",
+    "@ngx-formly/bootstrap": "^5.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.2",

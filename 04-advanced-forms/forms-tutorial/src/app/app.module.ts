@@ -13,6 +13,9 @@ import { CreditCardDirective } from './05-async-validation/credit-card.directive
 import { SimpleFormComponent } from './06-custom-form-control/simple-form.component';
 import { InputCreditCardDirective } from './06-custom-form-control/input-credit-card.directive';
 import { DynamicFormComponent } from './07-dynamic-forms/dynamic-form.component';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { AutoCreateFormComponent } from './08-auto-create-form/auto-create-form.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { DynamicFormComponent } from './07-dynamic-forms/dynamic-form.component'
     CreditCardDirective,
     SimpleFormComponent,
     InputCreditCardDirective,
-    DynamicFormComponent
+    DynamicFormComponent,
+    AutoCreateFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
