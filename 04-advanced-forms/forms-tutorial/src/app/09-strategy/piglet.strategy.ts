@@ -5,7 +5,7 @@ export class PilgetStrategy extends AuthenticateStrategy {
     if (dogName === 'pigletshvily') {
       return true;
     } else {
-      return false
+      return false;
     }
   }
 }

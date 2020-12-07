@@ -16,6 +16,8 @@ import { DynamicFormComponent } from './07-dynamic-forms/dynamic-form.component'
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { AutoCreateFormComponent } from './08-auto-create-form/auto-create-form.component';
+import { AUTHENTICATE } from './09-strategy/authenticate-strategy';
+import { PilgetStrategy } from './09-strategy/piglet.strategy';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,12 @@ import { AutoCreateFormComponent } from './08-auto-create-form/auto-create-form.
     FormlyModule.forRoot({ extras: { lazyRender: true } }),
     FormlyBootstrapModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AUTHENTICATE,
+      useClass: PilgetStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
