@@ -56,3 +56,8 @@ The component will return an address object.
 - Create a custom validation for id number
 - Create a custom validation for phone number
 - you can attach the phone validation to the component you created in the first EX.
+
+## EX Password / Repeat password validation
+
+- formgroup validation
+- validate password and repeat password match

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
       <input
         type="email"
         name="yourEmail"
-        piglet
+        [piglet]="['sweetness', 'piglet']"
         ngModel
         #myModel="ngModel"
       />

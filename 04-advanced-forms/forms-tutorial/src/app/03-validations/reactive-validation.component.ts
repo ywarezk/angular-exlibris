@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { pigletValidate } from '../04-custom-validation/piglet.directive';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class TemplateDrivenValidationComponent  {
   }, [])
   */
   myEmailForm = this._formBuilder.group({
-    email: ['', [Validators.required, Validators.minLength(3)] ]
+    email: ['', [Validators.required, Validators.minLength(3), pigletValidate] ]
   })
 
 
