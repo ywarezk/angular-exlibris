@@ -2,6 +2,9 @@
 
 Advanced topics and pattern about angular dependency injection
 
+
+
+
 ## Lesson Plan
 
 - Recap DI
