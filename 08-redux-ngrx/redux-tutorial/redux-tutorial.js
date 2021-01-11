@@ -20,6 +20,18 @@ const store = Redux.createStore(reducer, {
 })
 
 // state = {   }
+/*
+
+state = {
+	user: {
+		firstName: ...	
+	},
+	todo: {
+		
+	}
+}
+
+ */
 
 store.subscribe(() => {
 	const state = store.getState();

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -9,6 +9,11 @@ import { FirstNameComponent } from './first-name.component';
 import { TodoComponent, TodoCounterComponent, TodoListComponent } from './todo.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import { EffectsModule } from '@ngrx/effects';
+import { TodoEffect } from './state/todo/todo.effect';
+import { todoReducer } from './state/todo/todo.reducer';
+import { EntityDataModule, DefaultDataServiceConfig } from '@ngrx/data';
 
 @NgModule({
   declarations: [
@@ -20,16 +25,31 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      user: userReducer
+      user: userReducer,
+      router: routerReducer,
+      todo: todoReducer
     }),
     StoreDevtoolsModule.instrument(),
     RouterModule.forRoot([
       {path: '', component: FirstNameComponent},
       { path: 'todo', component: TodoComponent}
     ]),
-    HttpClientModule
+    HttpClientModule,
+    StoreRouterConnectingModule.forRoot(),
+    EffectsModule.forRoot([
+      TodoEffect
+    ]),
+    EntityDataModule.forRoot({
+      entityMetadata: {
+        Task: {}
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    { provide: DefaultDataServiceConfig, useValue: {
+      root: 'http://nztodo.herokuapp.com/api/'
+    }}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
